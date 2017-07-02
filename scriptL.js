@@ -6,8 +6,8 @@ $(document).ready(function () {
 		var login = {
 			username: logindata[0].value,
 			password: logindata[1].value
-		 };
-		 login = JSON.stringify(login);
+		};
+		login = JSON.stringify(login);
 		$.ajax({
 			type:'POST',
 			url:'https://richegg.top/login',

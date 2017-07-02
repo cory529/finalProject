@@ -41,10 +41,11 @@ $(document).ready(function () {
 	//刪除文章
 	$('body').on('click','.btn-del',function(){
 		var fullArt = $(this).attr('.full-art');
+		var id = window.location.hash.replace("#","");
 		$.ajax({
 			type: 'DELETE',
 			data:fullArt,
-			url: 'https://richegg.top/posts/87909',
+			url: 'https://richegg.top/posts/'+id,
 			contentType:'application/json',
 			xhrFields: {
 	      		withCredentials: true
@@ -63,9 +64,10 @@ $(document).ready(function () {
 
 	//開啟編輯模式
 	$('body').on('click','.btn-edit',function(){
+		var id = window.location.hash.replace("#","");
 		$.ajax({
 			type:'GET',
-			url:'https://richegg.top/posts/87909',
+			url:'https://richegg.top/posts/'+id,
 			contentType:'application/json',
 			xhrFields: {
       			withCredentials: true
@@ -91,6 +93,7 @@ $(document).ready(function () {
 
 	//儲存編輯後的文章
 	$('body').on('click','.btn-saveArt',function(){
+		var id = window.location.hash.replace("#","");
 		var title = $('#artTitle').val();
 		var content = $('#artContent').val();
 		var tags = $('#artTags').val();
@@ -102,7 +105,7 @@ $(document).ready(function () {
 		submitA = JSON.stringify(submitA);
 		$.ajax({
 			type:'PATCH',
-			url:'https://richegg.top/posts/87909',
+			url:'https://richegg.top/posts/'+id,
 			data:submitA,
 			contentType:'application/json',
 			xhrFields: {
