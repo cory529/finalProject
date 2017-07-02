@@ -168,7 +168,7 @@ $(document).ready(function () {
 		submiT = JSON.stringify(submiT);
 		$.ajax({
 			type:'PATCH',
-			url:'https://richegg.top/authors/test1',
+			url:'https://richegg.top/authors/'+username,
 			data:submiT,
 			contentType:'application/json',
 			xhrFields: {
