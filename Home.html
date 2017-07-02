@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title> MyBloggy </title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="scriptH.js"></script>
+	<link href="home.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="container">
+	    	<div class="navbar-header">
+	    		<a class="navbar-brand" href="Home.html">Godri Bloggy</a>
+	    	</div>
+	    	<form class="navbar-form navbar-right">
+		  		<span onclick="document.getElementById('infoModal').style.display='block'" class="btn btn-warning"title="My Info" id="infoBtn"><img src="02.png" width="18px"></span>
+		  		<a class="btn btn-primary" id="btn-logout" href="login.html">Log out</a>
+			</form>
+			<div class="modal col-md-6 col-md-offset-3" id="infoModal" role="dialog">
+				<form class="modal-content animate">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="col col-md-8 offset-md-2"> 
+								<h2 class="modal-title">My Information</h2>
+			      			</div>
+			      			<span onclick="document.getElementById('infoModal').style.display='none'" style="font-size: 40px;"class="close" title="Close">&times;</span>
+						</div>
+				      	<div class="modal-body">
+				        	<div class="form-group" id="infoForm">
+				        		
+							</div>
+				      	</div>
+					    <div class="modal-footer">
+					        <button class="btn btn-primary btn-saveCng">Save</button>
+				      	</div>
+			    	</div>
+				</form>		
+			</div>
+	    </div>
+    </nav>
+
+	<div class="jumbotron">
+      <div class="container">
+        <h1>Hello!</h1>
+        <p>Godri is cute.</p>
+      </div>
+    </div>
+
+    <div class="content">
+    	<div class="container">
+    		<div class="row">
+				<div class="col col-md-8 offset-md-2">
+					<button onclick="document.getElementById('myModal').style.display='block'" style="width:100px;" class="btn btn-primary">Add Article</button>
+				</div>
+			</div>
+			<div class="modal col-md-6 col-md-offset-3" id="myModal" role="dialog">
+				<form class="modal-content animate">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="col col-md-8 offset-md-2"> 
+							<h2 class="modal-title">Write some...</h2>
+			      			</div>
+			      			<span onclick="document.getElementById('myModal').style.display='none'" style="font-size: 40px;"class="close" title="Close">&times;</span>
+						</div>
+				      	<div class="modal-body">
+				        	<div class="form-group">
+				        		<form>
+				        			<input id="input-title" type="text" class="form-control" placeholder="Title">
+									<span class="textarea">
+										<textarea id="input-content" type="text" class="form-control" rows="10" placeholder="Content"></textarea>
+									</span>
+									<input id="input-tag" type="text" class="form-control" placeholder="Tags">
+				        		</form>	
+							</div>
+				      	</div>
+					    <div class="modal-footer">
+					        <button class="btn btn-primary" id="btn-addArticle">Add</button>
+				      	</div>
+			    	</div>
+				</form>		
+			</div>
+			<div class="row">
+				<div class="col col-md-6 col-md-offset-3">
+					<div id="articleContainer"  class="row">
+
+					</div>
+				</div>
+			</div>
+		</div>  		
+	</div>	
+
+	<!--<script>
+		$(document).ready(function () {
+			App.init();
+		});
+	</script>-->
+
+</body>
+</html>

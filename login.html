@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> MyBloggy LogIn </title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scriptL.js"></script>
+    <link href="login.css" rel="stylesheet">
+</head>
+<body>
+    <div class="col-md-6 col-md-offset-5">
+        <h2>Let's Login</h2>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:155px;" class="btn btn-primary">Login</button>
+    </div>
+    
+    <div id="id01" class="modal">  
+        <form class="modal-content animate col-md-6 col-md-offset-3" id="loginForm">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="02.png" alt="head" class="head" >
+            </div>
+
+            <div class="container col-md-6 col-md-offset-3">
+                <div class="form-group  ">
+                    <form>
+                        <label for="inputUsername">Username</label>
+                        <input name="username" type="Username" class="form-control" id="inputUsername" placeholder="Username" required>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <form>
+                        <label for="inputPassword">Password</label>
+                        <input name="password" type="Password" class="form-control" id="inputPassword" placeholder="Password" required>
+                    </form>
+                </div>       
+                <button class="btn btn-primary" id="loginSubmit">Login</button>
+                
+                <!--<input type="checkbox" checked="checked"> Remember me -->
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
